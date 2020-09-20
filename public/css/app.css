@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1E202A;
+}
+
+.container {
+  width: 82%;
+  margin: 50px auto 100px;
+}
+
+.container .generalStats .header {
+  margin: 50px 0;
+  letter-spacing: 0;
+  color: #fff;
+  font-size: 1em;
+}
+
+.container .generalStats .header p {
+  font-size: 15px;
+  color: #8B97C6;
+}
+
+.container .generalStats .stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+
+.container .generalStats .stats .card {
+  background: #252A41;
+  width: 245px;
+  height: 215px;
+  padding: 20px 20px 25px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.container .generalStats .stats .card:before {
+  display: block;
+  content: "";
+  height: 4px;
+  width: 100%;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+}
+
+.container .generalStats .stats .card .username {
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  color: #8B97C6;
+  font-size: 12px;
+}
+
+.container .generalStats .stats .card .username i {
+  color: #3b5998;
+  font-size: 20px;
+}
+
+.container .generalStats .stats .card .username p {
+  margin: 0 5px;
+  font-weight: 700px;
+}
+
+.container .generalStats .stats .card .followers {
+  text-align: center;
+  color: #fff;
+}
+
+.container .generalStats .stats .card .followers h3 {
+  font-size: 50px;
+}
+
+.container .generalStats .stats .card .followers p {
+  letter-spacing: 4px;
+  font-size: 13px;
+  color: #8B97C6;
+}
+

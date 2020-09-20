@@ -1,0 +1,88 @@
+//
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: #1E202A;
+}
+
+.container{
+    width: 82%;
+    margin: 50px auto 100px;
+    // margin: auto;
+    .generalStats{
+        .header{
+            margin: 50px 0;
+            letter-spacing: 0;
+            color: #fff;
+            font-size: 1em;
+            p{
+                font-size: 15px;
+                color: #8B97C6;
+            }
+        }
+        .stats{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            column-gap: 30px;
+            .card{
+                background: #252A41;
+                width: 245px;
+                height: 215px;
+                padding: 20px 20px 25px;
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                justify-content: space-around;
+                border-radius: 5px;
+                position: relative;
+                overflow: hidden;
+                &:before{
+                    display: block;
+                    content: '';
+                    height: 4px;
+                    width: 100%;
+                    background: #fff;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    border-radius: 5px;
+                }
+
+                .username{
+                    display: flex;
+                    flex-flow: row;
+                    width: 100%;
+                    align-items: center;
+                    justify-content: center;
+                    color: #8B97C6;
+                    font-size: 12px;
+                    i{
+                        color: #3b5998;
+                        font-size: 20px;
+                    }
+                    p{
+                        margin: 0 5px;
+                        font-weight: 700px;
+                    }
+                }
+                .followers{
+                    text-align: center;
+                    color: #fff;
+                    h3{
+                        font-size: 50px;
+                    }
+                    p{
+                        letter-spacing: 4px;
+                        font-size: 13px;
+                        color: #8B97C6;
+                    }
+                }
+            }
+        }
+    }
+}
