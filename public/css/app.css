@@ -35,9 +35,9 @@ body {
 
 .container .generalStats .stats .card {
   background: #252A41;
-  width: 245px;
+  width: 255px;
   height: 215px;
-  padding: 20px 20px 25px;
+  padding: 20px 17px 25px;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -67,6 +67,7 @@ body {
   justify-content: center;
   color: #8B97C6;
   font-size: 12px;
+  font-weight: 700;
 }
 
 .container .generalStats .stats .card .username i {
@@ -92,5 +93,48 @@ body {
   letter-spacing: 4px;
   font-size: 13px;
   color: #8B97C6;
+}
+
+.container .generalStats .stats .card .percent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #1DB489;
+}
+
+.container .generalStats .stats .card .percent p {
+  font-size: 12px;
+}
+
+.container .generalStats .stats .card .percent i {
+  margin: 0 5px;
+}
+
+.container .generalStats .stats .card:nth-child(1) .username i {
+  color: #4267B2;
+}
+
+.container .generalStats .stats .card:nth-child(2) .username i {
+  color: #1DA1F2;
+}
+
+.container .generalStats .stats .card:nth-child(3) .username i {
+  color: transparent;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+
+.container .generalStats .stats .card:nth-child(4) .username i {
+  color: red;
+}
+
+.container .generalStats .stats .card:nth-child(4) .percent {
+  color: #DC414C;
+}
+
+.container .generalStats .stats .card:nth-child(4) .percent i {
+  transform: rotate(180deg);
 }
 

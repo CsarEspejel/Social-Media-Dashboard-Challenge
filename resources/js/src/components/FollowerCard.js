@@ -1,24 +1,30 @@
 import React from 'react';
 
+const FollowerCard = (props) => {
 
-const FollowerCard = () => {
+    const icon = (type) => {
+        return "fab fa-"+type
+    };
+
     return(
-        <div className='card'>
-            
-            <div className='username'>
-                <i className="fab fa-facebook-square" />
-                <p>@username</p>
+        props.infos.map(info => {
+            return <div className='card' key={info._id}>
+                <div className='username'>
+                    <i className={icon(info.type)} />
+                    <p>{info.username}</p>
+                </div>
+                <div className='followers'>
+                    <h3>{info.followers}</h3>
+                    <p>FOLLOWERS</p>
+                </div>
+                <div className='percent'>
+                    <i className='fas fa-sort-up'></i>
+                    <p>{info.percent} Today</p>
+                </div>
+                
             </div>
-            <div className='followers'>
-                <h3>1234</h3>
-                <p>FOLLOWERS</p>
-            </div>
-            <div className='porcent'>
-                <p><i className='fas fa-sort-up'></i>12 Today</p>
-            </div>
-            
-        </div>
-    )
+        })
+    );
 }
 
 export default FollowerCard;
