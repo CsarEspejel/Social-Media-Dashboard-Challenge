@@ -11,18 +11,19 @@ body {
 
 .container {
   width: 82%;
-  margin: 50px auto 100px;
+  margin: 50px auto 50px;
 }
 
 .container .generalStats .header {
   margin: 50px 0;
   letter-spacing: 0;
   color: #fff;
-  font-size: 1em;
+  font-size: 1.2em;
 }
 
 .container .generalStats .header p {
   font-size: 15px;
+  font-weight: 700;
   color: #8B97C6;
 }
 
@@ -127,7 +128,7 @@ body {
 }
 
 .container .generalStats .stats .card:nth-child(4) .username i {
-  color: red;
+  color: #FF0000;
 }
 
 .container .generalStats .stats .card:nth-child(4) .percent {
@@ -136,5 +137,93 @@ body {
 
 .container .generalStats .stats .card:nth-child(4) .percent i {
   transform: rotate(180deg);
+}
+
+.container .overview {
+  display: flex;
+  flex-flow: column;
+  margin: 50px 0 25px 0;
+}
+
+.container .overview .header {
+  font-weight: 700;
+  font-size: 20px;
+  color: #8B97C6;
+}
+
+.container .overview .body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 1.8em;
+       column-gap: 1.8em;
+}
+
+.container .overview .body .cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 1.8em;
+       column-gap: 1.8em;
+}
+
+.container .overview .body .cards .overview-card {
+  background: #252A41;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  padding: 20px;
+  width: 16em;
+  height: 7.5em;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+
+.container .overview .body .cards .overview-card .title {
+  color: #8B97C6;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 0.8em;
+  font-weight: 700;
+}
+
+.container .overview .body .cards .overview-card .title i {
+  font-size: 20px;
+}
+
+.container .overview .body .cards .overview-card .title .facebook {
+  color: #4267B2;
+}
+
+.container .overview .body .cards .overview-card .title .twitter {
+  color: #1DA1F2;
+}
+
+.container .overview .body .cards .overview-card .title .instagram {
+  color: transparent;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+
+.container .overview .body .cards .overview-card .title .youtube {
+  color: #FF0000;
+}
+
+.container .overview .body .cards .overview-card .body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.container .overview .body .cards .overview-card .body p:nth-child(1) {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2em;
+}
+
+.container .overview .body .cards .overview-card .body p:nth-child(2) {
+  color: #DC414C;
+  font-weight: 500;
+  font-size: 12px;
 }
 

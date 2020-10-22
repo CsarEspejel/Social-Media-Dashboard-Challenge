@@ -1,31 +1,12 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import FollowerCard from './FollowerCard';
-import axios from 'axios';
 
-const api = axios.create({
-    baseURL: 'http://localhost:8000/api'
-})
+const SMDashboard = (props) => {
 
-const SMDashboard = () => {
-
-    const [infos, setInfo] = useState([]);
-
-    const fetchingData = () => {
-        api.get('/socialData').then(res => {
-            console.log(res);
-            const result = res.data;
-            setInfo(result);
-            console.log(result);
-        });
-    }
-
-    useEffect(() => {
-        fetchingData();
-    },[])
     
     const createCard = () => {
         return (
-            <FollowerCard infos={infos} />
+            <FollowerCard infos={props.datos} />
         )
     }
 
