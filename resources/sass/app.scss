@@ -10,6 +10,8 @@ $fb-color: #4267B2;
 $tw-color: #1DA1F2;
 $ig-color: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
 $yt-color: #FF0000;
+$status-up-color: #1DB489;
+$status-down-color: #DC414C;
 
 body{
     background: #1E202A;
@@ -17,7 +19,7 @@ body{
 
 .container{
     width: 82%;
-    margin: 50px auto 50px;
+    margin: 50px auto 30px;
     // margin: auto;
     .generalStats{
         .header{
@@ -94,7 +96,7 @@ body{
                     flex-direction: row;
                     align-items: center;
                     justify-content: center;
-                    color: #1DB489;
+                    color: $status-up-color;
                     p{
                         font-size: 12px;
                     }
@@ -105,6 +107,9 @@ body{
             }
 
             .card:nth-child(1){
+                &:before{
+                    background: $fb-color;
+                }
                 .username{
                     i{
                         color: $fb-color;
@@ -112,6 +117,9 @@ body{
                 }
             }
             .card:nth-child(2){
+                &:before{
+                    background: $tw-color;
+                }
                 .username{
                     i{
                         color: $tw-color;
@@ -119,6 +127,9 @@ body{
                 }
             }
             .card:nth-child(3){
+                    &:before{
+                        background: $ig-color;
+                    }
                 .username{
                     i{
                         color: transparent;
@@ -132,13 +143,16 @@ body{
                 }
             }
             .card:nth-child(4){
+                &:before{
+                    background: $yt-color;
+                }
                 .username{
                     i{
                         color: $yt-color;
                     }
                 }
                 .percent{
-                    color: #DC414C;
+                    color: $status-down-color;
                     i{
                         transform: rotate(180deg);
                     }
@@ -169,7 +183,7 @@ body{
                     display: flex;
                     flex-direction: column;
                     margin: 20px 0;
-                    padding: 20px;
+                    padding: 20px 30px;
                     width: 16em;
                     height: 7.5em;
                     justify-content: space-between;
@@ -203,16 +217,25 @@ body{
                         display: flex;
                         flex-direction: row;
                         justify-content: space-between;
-                        p:nth-child(1){
+                        align-items: center;
+                        h1{
                             color: #fff;
                             font-weight: 700;
-                            font-size: 2em;
                         }
-                        p:nth-child(2){
-                            color: #DC414C;
-                            font-weight: 500;
-                            font-size: 12px;
-                            
+                        div{
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            p{
+                                font-weight: 700;
+                                font-size: 12px;
+                                margin: 0 3px;
+                            }
+                            i{
+                                font-weight: 700;
+                                font-size: 12px;
+                                margin: 0 3px;
+                            }
                         }
                     }
                 }
